@@ -15,3 +15,42 @@ var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l',
 
 // Choice is logged to console //
     console.log(computerChoice);
+
+// Key Event //
+document.onkeyup = function(event) {
+    var userGuess = event.key;
+    console.log(event);
+
+// Appending UserGuess to usedLetters Array above //
+    usedLetters.push(event.key);
+
+// Resets the Guess Counter to 10 attemps after a Win or Loss //
+    var resetGuesses = function() {
+    guesses = 10;
+    document.querySelector("guesses").innerHTML = "";
+    }
+
+// Conditionals to establish Guesses, Wins & Losses //
+ 
+// Determins if User Wins and Resets Game //
+    if(userGuess === computerChoice){
+        wins++;
+        resetGuesses(); 
+    }
+// Incorrect Guess is subtracted from Total Number of Attempts //
+    else{
+        guesses--;
+    }
+ //  Determines if User Losses and Resets Game //
+    if(guesses < 1){
+        losses++;
+        resetGuesses();
+    }
+
+// Results are passed to HTML //
+    document.getElementById("wins").innerHTML = "Wins: " + wins;
+    document.getElementById("losses").innerHTML = "Losses: " + losses;
+    document.getElementById("guesses").innerHTML = "Tries Left: " + guesses;
+    document.getElementById("wrongGuesses").innerHTML = "Not Psychic About: " + usedLetters;
+
+}

@@ -1,1 +1,53 @@
 /* Psychic Game CSS Stylesheet */
+
+/* Universal Box-sizing*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    background-image: url(../images/crystal_ball.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: 110%;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: yellow;
+    text-shadow: 2px 2px 5px red;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes example {
+    from {color: orangered;}
+    to {color: yellow;}
+}
+  
+/* Standard syntax */
+@keyframes example {
+    from {color: orangered;}
+    to {color: yellow;}
+}
+
+div#gameGuts {
+    width: 100%;
+    margin-top: 8%;
+    float: right;
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+    color: black;
+    text-shadow: 1px 1px 10px white;
+    font-weight: bolder;
+    text-align: center;
+}

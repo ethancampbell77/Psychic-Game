@@ -13,18 +13,31 @@
  <!--Font from Google Fonts-->
  <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
 
- <!--JavaScript-->
- <script type="text/javascript" src="assets/javascript/game.js"></script> 
 </head>
 
-  <h1> Can You Guess The Letter I'm Thinking Of? </h1>    
+<!-- Opening Music *** Getting an error in Chrome and I can't seem to figure out what's wrong. Works on Safari and Firefox without the error... Maybe a pop-up blocker?-->
+<audio src="assets/music/Psychic_Letter_Music.m4a" id="themeMusic" autoplay="autoplay"></audio>
 
+<!-- Win Tones -->
+<audio id="winMusic" src="assets/music/Psychic_Win.m4a"></audio>
+
+<!-- Lose Tones -->
+<audio id="loseMusic" src="assets/music/Lose_Music.m4a"></audio>
+
+<!-- Heading -->
+  <h1> Can You Guess The Letter I'm Thinking Of? </h1>    
+    <h2 id="directionText">Pick A Letter... Any Letter and Begin The Psychic Waltz</h2>
+
+<!-- Game Info -->
   <div id="gameGuts">
     <p id="wins"></p>
     <p id="losses"></p>
     <p id="guesses"></p>
     <p id="wrongGuesses"></p>
   </div>
+
+<!--JavaScript-->
+<script type="text/javascript" src="assets/javascript/game.js"></script> 
 
 <body>
     

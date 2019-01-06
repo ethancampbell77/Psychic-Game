@@ -10,12 +10,12 @@ var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l',
     var guesses = 10;
     var usedLetters = [];
 
-// Computer Chooses Letter at Random //
+// Resets the Guess Counter to 10 attemps after a Win or Loss & Computer Chooses Letter at Random //
     
-   
+var resetGuesses = function() {
+    guesses = 10;
+    usedLetters = [];
 var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
-
-// Choice is logged to console //
     console.log(computerChoice);
 
 // Key Event //
@@ -25,12 +25,6 @@ var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
 
 // Appending UserGuess to usedLetters Array above //
     usedLetters.push(event.key);
-
-// Resets the Guess Counter to 10 attemps after a Win or Loss //
-    var resetGuesses = function() {
-    guesses = 10;
-    usedLetters = [];
-    }
 
 // Conditionals to establish Guesses, Wins & Losses //
  
@@ -60,7 +54,16 @@ var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
     document.getElementById("wrongGuesses").innerHTML = "Not Psychic About: " + usedLetters;
 }
 
-// Theme Music //
-window.onload=function() {
-    document.getElementById("themeMusic").play();
+// Theme Music If for Chrome & Else for the rest of the browsers //
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if(!isChrome){
+      $('#iframeAudio').remove()
+    }
+  else{
+     $('#playAudio').remove() 
+
+
 }
+}
+
+resetGuesses();

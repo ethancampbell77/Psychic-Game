@@ -45,7 +45,8 @@ h2 {
     margin-top: 10%;
     text-align: center;
     color: white;
-    text-shadow: 1px 1px 5px black;  
+    font-weight: bolder;
+    text-shadow: .5px .5px 3px black;  
 }
 
 /* Game Text Styling */

@@ -15,8 +15,12 @@
 
 </head>
 
-<!-- Opening Music *** Getting an error in Chrome and I can't seem to figure out what's wrong. Works on Safari and Firefox without the error... Maybe a pop-up blocker?-->
+<!-- Opening Music  - No loop, Plays only 1 time *** Getting an error in Chrome BUT this HTML works for Firefox and Safari for sure -->
 <audio src="assets/music/Psychic_Letter_Music.m4a" id="themeMusic" autoplay="autoplay"></audio>
+
+<!-- Google Chrome Fix Audio Blocking on load of page-->
+<iframe src="assets/music/Psychic_Letter_Music.m4a" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe> 
 
 <!-- Win Tones -->
 <audio id="winMusic" src="assets/music/Psychic_Win.m4a"></audio>

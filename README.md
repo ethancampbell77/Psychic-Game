@@ -7,3 +7,5 @@ Press a letter key to guess the number the computer has guessed. You can pick nu
 Music and Sound: E Campbell
 
 Crystal Ball Image: allanswart/iStock
+
+Game deployed to GitHub: https://ethancampbell77.github.io/Psychic-Game/
